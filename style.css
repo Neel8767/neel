@@ -1,0 +1,70 @@
+/* Reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #c3ecb2, #7ddaff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: bgFade 10s infinite alternate;
+}
+
+@keyframes bgFade {
+  0% { background: linear-gradient(135deg, #c3ecb2, #7ddaff); }
+  100% { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  width: 90%;
+  max-width: 500px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animated-text {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #e6f7ff;
+}
